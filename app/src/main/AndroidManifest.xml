@@ -1,0 +1,49 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="News App"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NewsApp">
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- UPDATED: Added windowSoftInputMode="adjustResize" to handle keyboard scrolling -->
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.auth.SignupActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.auth.ForgotPasswordActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Main Flow -->
+        <activity android:name=".ui.MainActivity" />
+
+        <!-- Home/News Activities -->
+        <activity android:name=".ui.home.DetailActivity" />
+        <activity android:name=".ui.home.WebViewActivity" />
+        <activity android:name=".ui.home.SeeAllActivity" />
+
+        <!-- Profile Activity -->
+        <activity
+            android:name=".ui.profile.UserProfileActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+    </application>
+</manifest>
